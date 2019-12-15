@@ -1,6 +1,10 @@
 Lighthouse light
 ================
 
+This project covers using a NeoPixel ring to create a lighthouse light effect, i.e. a light than rotates round and round.
+
+![animated GIF of project](images/lighthouse-animated.gif)
+
 Parts
 -----
 
