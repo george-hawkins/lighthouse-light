@@ -12,6 +12,8 @@ Initially I intended to use silicone coated stranded wire [like this](https://ho
 
 Depending on whether you're computer has old style USB A ports or newer USB C ports, you'll need a USB mirco to USB A cable [like this](https://www.digitec.ch/en/s1/product/value-usb-20-kabel-a-micro-015m-20-usb-cables-2750900) or a USB micro to USB C cable [like this](https://www.digitec.ch/en/s1/product/value-usb-c-micro-b-c-micro-1m-20-usb-cables-11694379?tagIds=77-532).
 
+<img height="512" src="images/photos/parts.jpg">
+
 ### Alternatives:
 
 * [ItsyBitsy M0 Express](https://www.adafruit.com/product/3727)
@@ -34,9 +36,11 @@ Setup
 
 Adafruit has [comprehensive documentation](https://learn.adafruit.com/adafruit-trinket-m0-circuitpython-arduino?view=all) for the Trinket M0.
 
+<img height="512" src="images/photos/connected-via-usb.jpg">
+
 ![CIRCUITPY USB drive](images/circuitpy-drive.png)
 
-First plug it in. Your laptop should recognise it as both:
+First plug it in. Your computer should recognise it as both:
 
 * A USB drive called CIRCUITPY.
 * A [serial device](https://en.wikipedia.org/wiki/Serial_port).
@@ -168,11 +172,15 @@ The wiring is essentially identical to that in the Adafruit ["Kaleidoscope Eyes"
 
 Note: the pin names are printed on the both the front and back of the ring - but much easier to read on the back.
 
+See [`soldering.md`](soldering.md) for photos of each step in the soldering process.
+
 As suggested, in the Adafruit tutorial, I inserted the wires from the front, then soldered on the back of the ring - this seems the wrong way around but it's much easier than trying to apply solder between the pixels on the front of the ring.
 
 **Important:** the Adafruit tutorial uses an RGB ring (with three LEDs per pixel) while we're using an RGBW ring with an additional white LED per pixel. This doesn't affect the wiring but it does mean the code examples in the tutorial won't work without modification.
 
 USB power is enough to power the Trinket M0 put not enough to power the NeoPixels.  So if you want to see the NeoPixels lighting up while doing development, i.e. editing `main.py` and copying it to the Trinket M0 USB drive, you'll need to turn on the battery pack. It's safe to do this even while connected via USB to your computer (all the necessary diodes etc. are there on the Trinket M0 to prevent power flowing in the wrong direction).
+
+<img height="512" src="images/photos/wired-up-and-connected.jpg">
 
 Coding
 ------
