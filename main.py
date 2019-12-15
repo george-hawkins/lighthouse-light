@@ -17,10 +17,11 @@ with adafruit_dotstar.DotStar(board.APA102_SCK, board.APA102_MOSI, 1) as dot:
 
 # Setup RGBW 16 NeoPixel ring.
 numpix = 16
-pixel = neopixel.NeoPixel(board.D0, numpix, bpp = 4, auto_write = False)
+pixel = neopixel.NeoPixel(board.D0, numpix, bpp=4, auto_write=False)
 
 BLACK = (0, 0, 0, 0)
 i = 0
+
 
 def setup():
     # Set `width` pixels to color and the rest to black.
@@ -30,8 +31,10 @@ def setup():
     global i
     i = 0
 
+
 def prompt():
     print("> ", end="")
+
 
 # Display available commands on the serial console.
 print()
@@ -42,6 +45,7 @@ print("* width 4 - set the number of lit pixels to 4.")
 print("* reverse - reverse the direction of rotation.")
 print()
 prompt()
+
 
 # Parse user entered commands.
 def parse(line):
@@ -69,12 +73,13 @@ def parse(line):
             direction *= -1
             width = numpix - width
         else:
-            print("Ignoring: {}".format(line)) # No f-strings as of CircuitPython 4.1.0.
+            print("Ignoring: {}".format(line))  # No f-strings as of CircuitPython 4.1.0.
     except Exception as e:
-        sys.print_exception(e) # CircuitPython doesn't have `traceback`.
+        sys.print_exception(e)  # CircuitPython doesn't have `traceback`.
     else:
         setup()
     prompt()
+
 
 setup()
 
