@@ -13,8 +13,16 @@ ImageMagick can rotate the resulting animated GIF if necessary:
 
     $ convert lighthouse2.gif -rotate -90 lighthouse2-r.gif
 
-The resulting files are quite large, I tried to optimize them with [Gifsicle](http://www.lcdf.org/gifsicle/) like so, but this introduced to much noise:
+I then removed some frames from the end of the sequence, to make the looping smoother, using [Gifsicle](http://www.lcdf.org/gifsicle/):
 
-    $ gifsicle -b -O3 --colors 256 foo.gif
+    $ gifsicle --delete '#75' '#76' '#77' '#78' '#79' '#80' < lighthouse-animated.gif > trimmed.gif
+
+The resulting files are quite large, I tried to optimize them with [Gifsicle](http://www.lcdf.org/gifsicle/) like so, but this had no significant affect on size:
+
+    $ gifsicle -b -O3 < trimmed.gif > optimized.gif
+
+Note that it warns that there are "too many colors, using local colormaps". This doesn't seem to be a problem, i.e. it is just a warning. If you try reducing down the colors, like so, this introduces too much noise:
+
+    $ gifsicle -b -O3 --colors 256 < trimmed.gif > optimized.gif
 
 The most popular alternative to Motion Stills for producing animated GIFs seems to be [GIPHY Cam](https://play.google.com/store/apps/details?id=com.giphy.camera&hl=en).
