@@ -5,6 +5,8 @@ This project covers using a NeoPixel ring to create a lighthouse light effect, i
 
 ![animated GIF of project](images/lighthouse-animated.gif)
 
+The LEDs in this clip are at a very low brightness - they can be set very substantially brighter.
+
 Parts
 -----
 
