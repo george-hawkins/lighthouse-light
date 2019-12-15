@@ -33,7 +33,7 @@ If using a strip you probably also want a Blinkinlabs soldering kit (which they 
 
 ### Batteries
 
-[4 x NiMH rechargeable batteries](https://www.digitec.ch/en/s1/product/varta-recharge-accu-power-battery-4pcs-aa-battery-2100mah-rechargeable-batteries-chargers-220503) (or the same [batteries with a charger](https://www.digitec.ch/en/s1/product/varta-lcd-plug-charger-battery-charger-4pcs-aa-battery-2100mah-rechargeable-batteries-chargers-583770)).
+[4 x NiMH rechargeable batteries](https://www.digitec.ch/en/s1/product/varta-recharge-accu-power-battery-4pcs-aa-battery-2100mah-rechargeable-batteries-chargers-220503) (or the same [batteries with a charger](https://www.digitec.ch/en/s1/product/varta-lcd-plug-charger-battery-charger-4pcs-aa-battery-2100mah-rechargeable-batteries-chargers-5837707)).
 
 **Important:** you can only use *NiMH* batteries with this setup. Normal alkaline batteries have a slightly higer voltage than rechargeable batteries and this difference is enough to destroy the NeoPixels. Alternatively one could use a [3 cell battery holder](https://www.pololu.com/product/1152) with alkaline batteries. Or one could introduce a [voltage regulator with a 5V output](https://www.pololu.com/product/2850).
 
