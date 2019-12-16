@@ -26,3 +26,21 @@ Note that it warns that there are "too many colors, using local colormaps". This
     $ gifsicle -b -O3 --colors 256 < trimmed.gif > optimized.gif
 
 The most popular alternative to Motion Stills for producing animated GIFs seems to be [GIPHY Cam](https://play.google.com/store/apps/details?id=com.giphy.camera&hl=en).
+
+Update
+------
+
+Later I quartered the number of frames like so (using this [Graphic Design StackExchange answer](https://graphicdesign.stackexchange.com/a/20937)):
+
+    $ gifsicle -U lighthouse-animated.gif $(seq -f '#%g' 0 2 74) -O2 -o l-2.gif
+    $ gifsicle -U l-2.gif $(seq -f '#%g' 0 2 38) -O2 -o l-4.gif
+
+Note: the values `74` and `38` above are the number of frames in the respective input files - this was determined with `gifsicle -I file.gif`.
+
+I then had to quadruple the delay (you can also use `gifsicle -I` to see the delay):
+
+    $ gifsicle -b --delay 12 < l-4.gif > l-4-12.gif 
+
+Finally I deleted the final frame to get a smoother transition on looping:
+
+    $ gifsicle --delete '#18' < l-4-12.gif > trimmed.gif
