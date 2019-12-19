@@ -116,7 +116,7 @@ $ screen /dev/tty.usbmodem*
 
 Auto-reload is on. Simply save files over USB to run them or enter REPL to disable.
 Press any key to enter the REPL. Use CTRL-D to reload.
-^D
+.
 Adafruit CircuitPython 4.1.0 on 2019-08-02; Adafruit Trinket M0 with samd21e18
 >>> help()
 Welcome to Adafruit CircuitPython 4.1.0!
