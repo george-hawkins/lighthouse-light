@@ -104,7 +104,7 @@ Adafruit CircuitPython 4.1.0 on 2019-08-02; Adafruit Trinket M0 with samd21e18
 
 Note that the drive also includes a `.fseventsd/no_log` and a `.metadata_never_index` file along with a `.Trashes` directory. These all tell macOS not to waste space on the drive with the various hidden files it usually generates.
 
-If you want to reinstall the example that came pre-installed you can find it [here](https://learn.adafruit.com/adafruit-trinket-m0-circuitpython-arduino/downloads) - just click the "Default CircuitPython files included with v2" button. You just need the `main.py` file along with the contesnts of the `lib` folder (and the `README.md` is informative).
+If you want to reinstall the example that came pre-installed you can find it [here](https://learn.adafruit.com/adafruit-trinket-m0-circuitpython-arduino/downloads) - just click the "Default CircuitPython files included with v2" button. You just need the `main.py` file along with the contents of the `lib` folder (and the `README.md` is informative).
 
 Connecting to the REPL
 ----------------------
